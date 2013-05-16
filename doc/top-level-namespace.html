@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Top Level Namespace
+  
+    &mdash; Documentation by YARD 0.8.5.2
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo;
+    
+    
+    <span class="title">Top Level Namespace</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Top Level Namespace
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="BanditAlgorithm.html" title="BanditAlgorithm (class)">BanditAlgorithm</a></span>, <span class='object_link'><a href="BernoulliArm.html" title="BernoulliArm (class)">BernoulliArm</a></span>, <span class='object_link'><a href="EpsilonGreedy.html" title="EpsilonGreedy (class)">EpsilonGreedy</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#test_algorithm-instance_method" title="#test_algorithm (instance method)">- (Array) <strong>test_algorithm</strong>(algo, arms, number_of_simulations, horizon) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Testing framework for testing bandit algorithms.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="test_algorithm-instance_method">
+  
+    - (<tt>Array</tt>) <strong>test_algorithm</strong>(algo, arms, number_of_simulations, horizon) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Testing framework for testing bandit algorithms</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>algo</span>
+      
+      
+        <span class='type'>(<tt>Proc</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>Block of code you want to test</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>arms</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>Arms we want to simulate draws from</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>number_of_simulations</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>self explanatory.</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>horizon</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>The number of times each algorithm is allowed to pull on arms during each
+simulation.</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>, <tt>Array</tt>, <tt>Array</tt>, <tt>Array</tt>, <tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>sim_nums, times, chosen_arms, rewards, cumulative_rewards</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'test_bandit_algorithm.rb', line 11</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_test_algorithm'>test_algorithm</span><span class='lparen'>(</span><span class='id identifier rubyid_algo'>algo</span><span class='comma'>,</span> <span class='id identifier rubyid_arms'>arms</span><span class='comma'>,</span> <span class='id identifier rubyid_number_of_simulations'>number_of_simulations</span><span class='comma'>,</span> <span class='id identifier rubyid_horizon'>horizon</span><span class='rparen'>)</span>
+	<span class='comment'># array of arrays
+</span>
+	<span class='id identifier rubyid_chosen_arms'>chosen_arms</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_rewards'>rewards</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_cumulative_rewards'>cumulative_rewards</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_sim_nums'>sim_nums</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+	<span class='id identifier rubyid_times'>times</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+	
+	<span class='lparen'>(</span><span class='id identifier rubyid_number_of_simulations'>number_of_simulations</span> <span class='op'>*</span> <span class='id identifier rubyid_horizon'>horizon</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>|</span>
+		<span class='id identifier rubyid_chosen_arms'>chosen_arms</span> <span class='op'>&lt;&lt;</span> <span class='float'>0.0</span>
+		<span class='id identifier rubyid_rewards'>rewards</span> <span class='op'>&lt;&lt;</span> <span class='float'>0.0</span>
+		<span class='id identifier rubyid_cumulative_rewards'>cumulative_rewards</span> <span class='op'>&lt;&lt;</span> <span class='float'>0.0</span>
+		<span class='id identifier rubyid_sim_nums'>sim_nums</span> <span class='op'>&lt;&lt;</span> <span class='float'>0.0</span>
+		<span class='id identifier rubyid_times'>times</span> <span class='op'>&lt;&lt;</span> <span class='float'>0.0</span>
+	<span class='kw'>end</span>
+
+	<span class='id identifier rubyid_number_of_simulations'>number_of_simulations</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span> <span class='id identifier rubyid_sim'>sim</span> <span class='op'>|</span>
+		<span class='comment'># Initialize the algorithm
+</span>
+		<span class='id identifier rubyid_horizon'>horizon</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span> <span class='id identifier rubyid_t'>t</span> <span class='op'>|</span>
+			<span class='id identifier rubyid_index'>index</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_sim'>sim</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='id identifier rubyid_horizon'>horizon</span> <span class='op'>+</span> <span class='id identifier rubyid_t'>t</span>
+
+			<span class='id identifier rubyid_sim_nums'>sim_nums</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_sim'>sim</span>
+			<span class='id identifier rubyid_times'>times</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_t'>t</span>
+
+			<span class='id identifier rubyid_chosen_arm'>chosen_arm</span> <span class='op'>=</span> <span class='id identifier rubyid_algo'>algo</span><span class='period'>.</span><span class='id identifier rubyid_select_arm'>select_arm</span><span class='lparen'>(</span><span class='rparen'>)</span>
+			<span class='id identifier rubyid_chosen_arms'>chosen_arms</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_chosen_arm'>chosen_arm</span>
+
+			<span class='id identifier rubyid_reward'>reward</span> <span class='op'>=</span> <span class='id identifier rubyid_arms'>arms</span><span class='lbracket'>[</span><span class='id identifier rubyid_chosen_arms'>chosen_arms</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_draw'>draw</span>
+			<span class='id identifier rubyid_rewards'>rewards</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_reward'>reward</span>
+
+			<span class='kw'>if</span> <span class='id identifier rubyid_t'>t</span> <span class='op'>==</span> <span class='int'>0</span>
+				<span class='id identifier rubyid_cumulative_rewards'>cumulative_rewards</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_reward'>reward</span>
+			<span class='kw'>else</span>
+				<span class='id identifier rubyid_cumulative_rewards'>cumulative_rewards</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_reward'>reward</span> <span class='op'>+</span> <span class='id identifier rubyid_cumulative_rewards'>cumulative_rewards</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span> <span class='op'>-</span> <span class='int'>1</span><span class='rbracket'>]</span>
+			<span class='kw'>end</span>
+
+			<span class='id identifier rubyid_algo'>algo</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_chosen_arm'>chosen_arm</span><span class='comma'>,</span> <span class='id identifier rubyid_reward'>reward</span><span class='rparen'>)</span>
+		<span class='kw'>end</span>
+	<span class='kw'>end</span>
+
+	<span class='kw'>return</span> <span class='lbracket'>[</span><span class='id identifier rubyid_sim_nums'>sim_nums</span><span class='comma'>,</span> <span class='id identifier rubyid_times'>times</span><span class='comma'>,</span> <span class='id identifier rubyid_chosen_arms'>chosen_arms</span><span class='comma'>,</span> <span class='id identifier rubyid_rewards'>rewards</span><span class='comma'>,</span> <span class='id identifier rubyid_cumulative_rewards'>cumulative_rewards</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu May 16 10:13:14 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
