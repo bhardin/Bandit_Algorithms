@@ -1,5 +1,6 @@
 require './bernoulli_arm'
 require './epsilon_greedy'
+require './softmax'
 
 # Testing framework for testing bandit algorithms
 # 
@@ -53,18 +54,26 @@ def test_algorithm(algo, arms, number_of_simulations, horizon)
 	return [sim_nums, times, chosen_arms, rewards, cumulative_rewards]
 end
 
-means = [0.9, 0.1, 0.3, 0.2, 0.1, 0.2, 0.1]
+means = [0.1, 0.12, 0.11, 0.13, 0.14, 0.15, 0.16]
 means.shuffle!
 
 arms = means.collect { |x|
 	BernoulliArm.new(x)
 } 
 
-eg = EpsilonGreedy.new(0.25, arms.length)
-test_algorithm(eg, arms, 1, 2000).inspect
+# Testing EpsilonGreedy
+# eg = EpsilonGreedy.new(0.2, arms.length)
+# test_algorithm(eg, arms, 1, 200).inspect
+# eg.print_data
+
+# Testing softmax
+sm = Softmax.new(0.1, arms.length)
+test_algorithm(sm, arms, 1, 1000).inspect
+sm.print_data
+sm.ordered_arms
 
 arms.each_with_index do | arm, i |
 	puts "arm_#{i}: #{arm.probability}"
 end
 
-eg.print_data
+
