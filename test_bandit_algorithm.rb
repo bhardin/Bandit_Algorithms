@@ -1,6 +1,7 @@
 require './bernoulli_arm'
 require './epsilon_greedy'
 require './softmax'
+require './ucb'
 
 # Testing framework for testing bandit algorithms
 # 
@@ -54,8 +55,8 @@ def test_algorithm(algo, arms, number_of_simulations, horizon)
 	return [sim_nums, times, chosen_arms, rewards, cumulative_rewards]
 end
 
-means = [0.1, 0.12, 0.11, 0.13, 0.14, 0.15, 0.16]
-means.shuffle!
+means = [0.1, 0.11, 0.12, 0.13, 0.14, 0.15, 0.18]
+# means.shuffle!
 
 arms = means.collect { |x|
 	BernoulliArm.new(x)
@@ -67,10 +68,16 @@ arms = means.collect { |x|
 # eg.print_data
 
 # Testing softmax
-sm = Softmax.new(0.1, arms.length)
-test_algorithm(sm, arms, 1, 1000).inspect
-sm.print_data
-sm.ordered_arms
+# sm = Softmax.new(0.1, arms.length)
+# test_algorithm(sm, arms, 1, 1000).inspect
+# sm.print_data
+# sm.ordered_arms
+
+# Testing UCB
+ucb = Ucb.new(0.1, arms.length)
+test_algorithm(ucb, arms, 1, 500).inspect
+ucb.print_data
+ucb.ordered_arms
 
 arms.each_with_index do | arm, i |
 	puts "arm_#{i}: #{arm.probability}"

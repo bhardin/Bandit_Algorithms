@@ -11,9 +11,11 @@ class Softmax < BanditAlgorithm
 
   def categorical_draw(probabilities)
     z = rand
+    cum_total = 0.0
 
     probabilities.each_with_index do | p, i |
-      if p > z
+      cum_total += p
+      if cum_total > z
         return i
       end
     end

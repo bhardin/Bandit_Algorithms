@@ -1,6 +1,6 @@
 # An Templated class. Other BanditAlgorithms should inherit this.
 class BanditAlgorithm
-	@epsilon = @counts = @values = nil
+	@epsilon = @counts = @values = @total_count = nil
 
 	# @param epsilon [Float] Percentage of the time algorithm should explore
 	# @param number_of_arms [Fixnum] The number of different iterations
@@ -8,6 +8,7 @@ class BanditAlgorithm
 		@epsilon = epsilon
 		@values = Array.new(number_of_arms, 0.0)
 		@counts = Array.new(number_of_arms, 0)
+		@total_count = 0
 	end	
 
 	# Prints data about the arms
@@ -16,7 +17,7 @@ class BanditAlgorithm
 		puts " General Data"
 		puts "----------------------------------------"
 		@values.each_with_index do | value, i |
-			puts "arm_#{i}: #{value}"
+			puts "arm_#{i}: #{value} - Pulled #{@counts[i]} times"
 		end
 		puts "----------------------------------------"
 	end
